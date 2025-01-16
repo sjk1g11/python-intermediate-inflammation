@@ -29,3 +29,8 @@ def test_daily_mean_integers():
     # Need to use Numpy testing functions to compare arrays
     npt.assert_array_equal(daily_mean(test_input), test_result)
 
+def test_sjk():
+    """Manually check the means are right."""
+    test_input = np.array([[1,2,3],[4,5,6],[7,8,9]])
+    test_result = np.nansum(test_input, axis=0)/3
+    npt.assert_array_equal(daily_mean(test_input), test_result)
