@@ -45,6 +45,6 @@ def test_patient_normalise(test, expected):
 
 def test_negative_inputs_patient_normalise(test, expected):
     """Test for type error"""
-    test_data = [[-1 0 0], [0,0,0], [0,0,0]]
+    test_data = [[-1,0,0], [0,0,0], [0,0,0]]
     with pytest.raises(ValueError):
         error_expected = patient_normalise(np.array(test_data))
